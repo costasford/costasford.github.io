@@ -6,49 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="./prettypretty/linkedin_headshot.png">
     <link rel="stylesheet" href="./prettypretty/style.css">
-    <title>Costas Ford</title>
+    <title>Life Mosaic: A Journey Through Personal Growth and Creativity</title>
 </head>
+
 <body>
+
     <header>
+
         <div class="container">
             <h1>Costas Ford || C4D || seefourdee</h1>
         </div>
-    </header>
-    <nav role="navigation">
-        <h1 onclick = "void(0);">Menu</h1>
-        <ol>
-        <li><a href="#">Bio</a>
-            <ol onclick = "void(0);">
-            <li><a href="#">Bio One</a></li>
-            <li><a href="#">Bio Two</a></li>
-            <li><a href="#">Bio 3</a></li>
+        <nav role="navigation">
+            <h1 onclick="void(0);">Menu</h1>
+            <ol>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#hobbies">Hobbies & Interests</a></li>
+                <li><a href="#connect">Connect</a></li>
+                <li><a href="#resume">Resume & Testimonials</a></li>
             </ol>
-        </li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Contact</a></li>
-        </ol>
-    </nav>
+        </nav>
+
+    </header>
+
     <main>
-        <div class="container">
-            <article>
-                <h2>Welcome to my Website!</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan tincidunt felis in ullamcorper.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan tincidunt felis in ullamcorper.</p>
-                <h3>Subheading</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan tincidunt felis in ullamcorper.</p>
+        <section id="mosaic">
+            <div class="mosaic-tile">
+                <a href="#portfolio">
+                    <img src="portfolio_thumbnail.jpg" alt="Portfolio Thumbnail">
+                    <div class="mosaic-description">Portfolio</div>
+                </a>
+            </div>
+            <!-- Add more mosaic tiles -->
+        </section>
+
+        <section id="timeline">
+            <div class="timeline">
+                <div class="timeline-event" data-year="2010">
+                    <div class="event-content">
+                        <h3>Graduated from College</h3>
+                        <p>Completed my degree in XYZ...</p>
+                    </div>
+                </div>
+                <!-- Add more timeline events -->
+            </div>
+        </section>
+
+        <section id="blog">
+            <article class="blog-post">
+                <img src="post_thumbnail.jpg" alt="Post Thumbnail">
+                <h3><a href="post_url.html">Post Title</a></h3>
+                <p>Post summary...</p>
             </article>
-            <aside>
-                <h3>News & Updates</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan tincidunt felis in ullamcorper.</p>
-            </aside>
-        </div>
+            <!-- Add more blog posts -->
+        </section>
+
+        <section id="portfolio">
+            <div class="portfolio-item">
+                <img src="project_thumbnail.jpg" alt="Project Thumbnail">
+                <h3>Project Title</h3>
+                <p>Project description...</p>
+            </div>
+            <!-- Add more portfolio items -->
+        </section>
+
+        <section id="hobbies">
+            <div class="hobby">
+                <img src="hobby_thumbnail.jpg" alt="Hobby Thumbnail">
+                <h3>Photography</h3>
+                <p>My passion for capturing beautiful moments...</p>
+            </div>
+            <!-- Add more hobbies and interests -->
+        </section>
+        
+        <section id="connect">
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <!-- Add more form fields -->
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://twitter.com/your_username" target="_blank">Twitter</a>
+                <!-- Add more social media links -->
+            </div>
+        </section>
+
+        <section id="resume">
+            <div class="resume">
+                <h3>Education</h3>
+                <p>University of XYZ, Degree in XYZ...</p>
+                <!-- Add more resume details -->
+                <h3>Work Experience</h3>
+                <p>Company ABC, Position, Duration...</p>
+            </div>
+            <div class="testimonials">
+                <blockquote>
+                    <p>"Costas is an incredibly talented professional with a strong work ethic. I highly recommend him!"</p>
+                    <footer>- John Doe, Colleague</footer>
+                </blockquote>
+                <!-- Add more testimonials -->
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="container">
-            &copy; 2023 All Rights Reserved.
+            <p>&copy; 2023 Costas Ford. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
