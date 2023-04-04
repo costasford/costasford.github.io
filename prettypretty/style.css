@@ -3,34 +3,35 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    color: #333;
+    background-color: #121212;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
-  /* Accessibility-focused color contrast */
+/* Accessibility-focused color contrast */
 a {
-    color: #0077cc;
+    color: #76b1ff;
 }
 a:hover {
-    color: #005fa3;
+    color: #5c9fe0;
 }
 
 a:focus {
-    outline: 3px solid #0077cc;
+    outline: 3px solid #76b1ff;
     outline-offset: 2px;
 }
 
-  /* Responsive design */
+/* Responsive design */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-  /* Header */
+/* Header */
 header {
-    background-color: #f5f5f5;
+    background-color: #242424;
     padding: 20px;
 }
 
@@ -38,7 +39,7 @@ header h1 {
     margin: 0;
 }
 
-  /* Navigation */
+/* Navigation */
 nav {
     background-color: #333;
     padding: 15px;
@@ -65,7 +66,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
-  /* Main content */
+/* Main content */
 main {
     display: flex;
     margin: 20px 0;
@@ -80,9 +81,9 @@ aside {
     flex: 1;
 }
 
-  /* Footer */
+/* Footer */
 footer {
-    background-color: #f5f5f5;
+    background-color: #242424;
     padding: 20px;
     text-align: center;
 }
