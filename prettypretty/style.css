@@ -8,6 +8,12 @@ body {
     margin: 0;
     padding: 0;
 }
+article {
+      display: none;
+}
+article:target {
+      display: block;
+}
 
 /* Accessibility-focused color contrast */
 a {
