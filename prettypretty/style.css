@@ -266,3 +266,68 @@ nav:hover ol li:nth-child(1) a:hover li:nth-child(2) a, nav:hover ol li:nth-chil
 nav:hover ol li:nth-child(1) a:hover li:nth-child(3) a, nav:hover ol li:nth-child(1) ol:hover li:nth-child(3) a {
     right: 2.5em;
     top: 9.5em; }
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  position: relative;
+  border-radius: 6px;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: 100%;
+  top: 20px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f9f9f9;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  right: 100%;
+  top: 20px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f9f9f9 transparent transparent;
+}
