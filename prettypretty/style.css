@@ -331,3 +331,47 @@ nav:hover ol li:nth-child(1) a:hover li:nth-child(3) a, nav:hover ol li:nth-chil
   border-width: 10px 10px 10px 0;
   border-color: transparent #f9f9f9 transparent transparent;
 }
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.portfolio-item {
+  position: relative;
+  flex: 0 0 calc(33.333% - 16px);
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-description {
+  opacity: 1;
+  transform: translateY(0);
+}
