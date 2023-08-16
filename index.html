@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Personal Website</title>
-    <link rel="stylesheet" href="/prettypretty/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="./prettypretty/linkedin_headshot.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prettypretty/style.css">
+  <title>Life Mosaic: A Journey Through Personal Growth and Creativity</title>
 </head>
 <body>
-    <!-- Introduction Section -->
-    <section id="introduction">
-        <div class="tron-lightcycle"></div>
-        <div class="intro-content">
-            <h1>Hello, I'm [Your Name]</h1>
-            <p class="professional-summary">
-                Experienced with ChatGPT, a proficient AI developer, and passionate about the future of technology. 
-            </p>
+  <header>
+    <div class="container">
+      <h1>Costas Ford || C4D || seefourdee</h1>
+    </div>
+    <nav>
+      <button type="button" onclick="void(0);">Hover</button>
+      <ol>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#hobbies">Hobbies & Interests</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ol>
+    </nav>
+  </header>
+  <main>
+    <article id="timeline">
+      <section id="timeline">
+        <h2>Timeline</h2>
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-date">1993</div>
+            <div class="timeline-content">
+              <h3>Birth</h3>
+              <p>I was born in a small town called Berkeley in a small hospital called Alta Bates.</p>
+            </div>
+          </div>
+      </section>
+    </article>
+    <article id="blog">
+      <section id="blog">
+        <h2>Running Thought</h2>
+        <p>Twitter is the only place to catch me:</p>
+        <a class="twitter-timeline" href="https://twitter.com/costasford?ref_src=twsrc%5Etfw">Tweets by costasford</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </section>
+    </article>
+    <article id="portfolio">
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+          <a href="https://costasford.github.io/NorcalSlippiLeaderboard" target="_blank">
+            <div class="portfolio-item" style="background-color: red; color: white;">
+              <img src="prettypretty/7f88e0735dfcdc7a3615.png" alt="Norcal Slippi Ranked Leaderboard">
+              <div class="portfolio-description">
+                <h3>Norcal Slippi Ranked Leaderboard</h3>
+                <p>I am a part of Norcal's Super Smash Bros. Melee community and have created an online leaderboard so that members can track their skill and progress in our favorite game.</p>
+              </div>
+            </div>
+          </a>
         </div>
-    </section>
-
-    <!-- Hobbies and Interests Section -->
-    <section id="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <ul class="hobby-list">
-            <li class="hobby web3"><span>Web3/Blockchain</span></li>
-            <li class="hobby iesf"><span>IESF</span></li>
-            <li class="hobby reading"><span>Reading/Writing</span></li>
-            <li class="hobby boinc"><span>BOINC</span></li>
-            <li class="hobby music"><span>Music/Production</span></li>
-            <li class="hobby ai"><span>Artificial Intelligence</span></li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="/send-email" method="post" id="contactForm">
-            <div class="input-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
-            </div>
-            <div class="input-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <div class="input-group">
-                <input type="submit" value="Send">
-            </div>
-        </form>
-        <p class="disclaimer">Your information will only be used for communication purposes and won't be shared with third parties.</p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
-    </footer>
+      </section>
+    </article>
+    <article id="hobbies">
+      <h2>Hobbies & Interests</h2>
+      <p>Share your hobbies and interests, showcasing your personal side and what you are passionate about outside of work.</p>
+    </article>
+    <article id="connect">
+      <h2>Connect</h2>
+      <p>Provide your contact information and links to your social media profiles, so visitors can easily connect with you.</p>
+    </article>
+    <div class="container">
+      <a href="https://www.buymeacoffee.com/costasford" target="_blank" rel="noopener" style="background-color: red; color: white;">Buy me a coffee!</a>
+     </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Costas Ford. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
