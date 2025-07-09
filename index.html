@@ -2,36 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Costas Ford</title>
-  <link rel="stylesheet" href="prettypretty/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f1ec url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      font-family: 'Lora', serif;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 800px;
+      padding: 60px 40px;
+      background: #fdfcf9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid #ccc;
+      text-align: center;
+      color: #2c2c2c;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #f9f8f5;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-row, .name, .title, .bottom-row {
+      text-shadow: 1px 1px 0 #e2e0dc;
+      transition: text-shadow 0.3s ease;
+    }
+
+    .card:hover .top-row,
+    .card:hover .name,
+    .card:hover .title,
+    .card:hover .bottom-row {
+      text-shadow: 2px 2px 1px #dcdad5;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 60px;
+      font-size: 0.95rem;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      margin-bottom: 60px;
+    }
+
+    .bottom-row {
+      font-size: 0.95rem;
+      font-weight: bold;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .top-row, .bottom-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Costas Ford</h1>
-    <nav>
-      <ul>
-        <li class="active"><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="card">
+    <div class="top-row">
+      <div>555.555.5555</div>
+      <div>
+        FORD &amp; FORD<br />
+        BUSINESS &amp; DEVELOPMENT
+      </div>
+    </div>
 
-  <main>
-    <h2>Hi, I'm Costas</h2>
-    <p>
-      I'm a web developer from the Bay Area specializing in PHP, HTML5, CSS3,
-      JavaScript and jQuery. I believe in making websites that are clean, simple,
-      and easy to use.
-    </p>
-    <p>
-      In my free time, I enjoy listening to music and playing video games with friends.
-    </p>
-  </main>
+    <div class="name">Costas Ford</div>
+    <div class="title">10X ENGINEER</div>
 
-  <footer>
-    <p>© 2025 Costas Ford</p>
-  </footer>
+    <div class="bottom-row">
+      PLACE SAN BRUNO CA 94066<br />
+      PHONE 555.555.5555 &nbsp;&nbsp; Text Only
+    </div>
+  </div>
 </body>
 </html>
