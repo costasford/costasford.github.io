@@ -9,11 +9,9 @@
     html {
       box-sizing: border-box;
     }
-
     *, *::before, *::after {
       box-sizing: inherit;
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -26,7 +24,6 @@
       height: 100vh;
       overflow-x: hidden;
     }
-
     .card-container {
       max-width: 680px;
       width: 100%;
@@ -34,26 +31,24 @@
       box-sizing: border-box;
       perspective: 1500px;
     }
-
     .card {
       width: 100%;
       aspect-ratio: 680 / 370;
       position: relative;
       transform-style: preserve-3d;
-      transition: transform 0.8s;
+      transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55), scale 0.3s ease;
+      transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) scale(var(--scale, 1));
+      will-change: transform;
     }
-
     .card.flipped {
       transform: rotateY(180deg);
     }
-
     .card-inner {
       width: 100%;
       height: 100%;
       position: relative;
       transform-style: preserve-3d;
     }
-
     .card-front, .card-back {
       position: absolute;
       inset: 0;
@@ -67,33 +62,25 @@
       flex-direction: column;
       justify-content: space-between;
     }
-
     .card-back {
       transform: rotateY(180deg);
       align-items: center;
       text-align: left;
       justify-content: space-between;
       padding: 2rem;
+      opacity: 0;
+      animation: fadeInBack 0.8s ease forwards;
+      animation-delay: 0.3s;
     }
-
-    .card-front:hover,
-    .card-back:hover {
-      background-color: #f9f8f5;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    @keyframes fadeInBack {
+      to {
+        opacity: 1;
+      }
     }
-
     .top-row, .name, .title, .bottom-row {
       text-shadow: 1px 1px 0 #e2e0dc;
       transition: text-shadow 0.3s ease;
     }
-
-    .card-front:hover .top-row,
-    .card-front:hover .name,
-    .card-front:hover .title,
-    .card-front:hover .bottom-row {
-      text-shadow: 2px 2px 1px #dcdad5;
-    }
-
     .top-row {
       display: flex;
       justify-content: space-between;
@@ -102,43 +89,70 @@
       font-size: clamp(0.95rem, 1vw, 1.05rem);
       font-family: 'Roboto Mono', monospace;
     }
-
     .top-row > div:first-child {
       flex: 1;
       text-align: left;
     }
-
     .top-row > div:last-child {
       flex: 1;
       text-align: right;
     }
-
+    .top-row a,
+    .portfolio a {
+      color: #2c2c2c;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .top-row a::after,
+    .portfolio a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #bcb9b2;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: bottom right;
+    }
+    .top-row a:hover::after,
+    .portfolio a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
     .middle {
       margin: 1.75rem 0 1.5rem 0;
     }
-
     .name {
       font-size: clamp(1.6rem, 3vw, 1.9rem);
       font-weight: 700;
       text-align: center;
       margin-bottom: 0.4rem;
+      transition: transform 0.3s ease;
     }
-
     .title {
       font-size: clamp(1.05rem, 2.5vw, 1.25rem);
       text-align: center;
       font-weight: 400;
       font-family: 'Roboto Mono', monospace;
       letter-spacing: 0.5px;
+      transition: transform 0.3s ease;
     }
-
+    .card-front:hover .name,
+    .card-front:hover .title {
+      transform: scale(1.02);
+    }
     .bottom-row {
       font-size: clamp(0.95rem, 1vw, 1rem);
       font-weight: bold;
       line-height: 1.6;
       text-align: center;
     }
-
     .portfolio {
       font-size: 1rem;
       font-family: 'Roboto Mono', monospace;
@@ -148,51 +162,54 @@
       gap: 1rem;
       width: 100%;
     }
-
     .portfolio h2 {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      animation: fadeSlideIn 0.6s ease forwards;
     }
-
     .portfolio ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-
     .portfolio li {
       font-size: 0.95rem;
       padding: 0.25rem 0;
       border-bottom: 1px solid #ccc;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeSlideIn 0.6s ease forwards;
     }
-
-    .portfolio a {
-      text-decoration: none;
-      color: #2c2c2c;
+    .portfolio li:nth-child(1) { animation-delay: 0.2s; }
+    .portfolio li:nth-child(2) { animation-delay: 0.3s; }
+    .portfolio li:nth-child(3) { animation-delay: 0.4s; }
+    .portfolio li:nth-child(4) { animation-delay: 0.5s; }
+    .portfolio li:nth-child(5) { animation-delay: 0.6s; }
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
-    .portfolio a:hover {
-      text-decoration: underline;
-    }
-
     @media (max-width: 720px) {
       .card-container {
         width: 100%;
         padding: 0 1rem;
       }
-
+      .card {
+        aspect-ratio: auto;
+        height: auto;
+      }
       .card-front, .card-back {
         padding: 1.25rem;
       }
-
       .top-row {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 0.5rem;
       }
-
       .top-row > div {
         text-align: center;
       }
