@@ -103,8 +103,8 @@ Feel free to use this template for your own site!
 
 ## 📬 Contact
 
-* **Email**: [costasford@example.com](mailto:costasford@example.com)
-* **LinkedIn**: \[Your LinkedIn Profile]
+* **Email**: costasford@gmail.com  
+* **LinkedIn**: [costasford](https://www.linkedin.com/in/costasford) 
 * **GitHub**: [github.com/costasford](https://github.com/costasford)
 
 ---
