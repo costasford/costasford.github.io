@@ -135,7 +135,7 @@
     }
     .card-back {
       transform: rotateY(180deg);
-      align-items: center;
+      align-items: flex-start;
       text-align: left;
       justify-content: space-between;
       padding: 2rem;
@@ -228,10 +228,16 @@
       padding: 2px;
       text-shadow: 1px 1px 1px #d8d6d0;
     }
-    @media (max-width: 360px) and (min-height: 480px) {
+    @media (max-width: 500px) {
       .card {
+        aspect-ratio: auto;
         height: auto;
       }
+      .card-front, .card-back {
+        position: relative;
+      }
+    }
+    @media (max-width: 360px) {
       .card-front, .card-back {
         padding: 1.5rem;
       }
@@ -261,7 +267,7 @@
       <div class="card-inner">
         <div class="card-front">
           <div class="top-row">
-            <div><a href="mailto:costasford@gmail.com" target="_blank">COSTASFORD@PROTON.ME</a></div>
+            <div><a href="mailto:costasford@proton.me">COSTASFORD@PROTON.ME</a></div>
             <div>
               FORD &amp; FORD<br>
               BUSINESS &amp; DEVELOPMENT
@@ -289,8 +295,8 @@
               <li><a href="https://costasford.github.io/NorcalSlippiLeaderboard/#/" target="_blank">📊 Data Viz Dashboard – React & D3</a></li>
               <li><a href="https://github.com/mantezana1998/Journey" target="_blank">🧠 Full Stack Web Application – Passion Project (IN PROGRESS)</a></li>
               <li><a href="https://costasford.github.io/" target="_blank">🌐 Portfolio Site – HTML, CSS, JS</a></li>
-              <li><a href="https://costasford.github.io/gpt-fusion/" target="_blank">🎮 Game Prototype – Unity & C#</a></li>
-              <li><a href="https://costasford.github.io/gpt-fusion/" target="_blank">🔒 Auth UI Kit – Tailwind & Firebase</a></li>
+              <li><a href="https://example.com/game-prototype" target="_blank">🎮 Game Prototype – Unity & C# (IN PROGRESS)</a></li>
+              <li><a href="https://example.com/auth-kit" target="_blank">🔒 Auth UI Kit – Tailwind & Firebase (IN PROGRESS)</a></li>
             </ul>
           </div>
         </div>
