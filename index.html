@@ -264,6 +264,12 @@
       width: 100%;
       padding: 2px;
       text-shadow: 1px 1px 1px #d8d6d0;
+      transition: transform 0.3s ease, padding-left 0.3s ease;
+    }
+    .portfolio li a:hover {
+      transform: translateX(8px);
+      padding-left: 8px;
+      background: linear-gradient(90deg, rgba(26,26,26,0.03) 0%, rgba(26,26,26,0) 100%);
     }
     @media (max-width: 500px) {
       .card {
@@ -329,11 +335,11 @@
           <div class="portfolio">
             <h2>Selected Projects</h2>
             <ul>
-              <li><a href="https://costasford.github.io/NorcalSlippiLeaderboard/#/" target="_blank">📊 Data Viz Dashboard – React & D3</a></li>
-              <li><a href="https://github.com/mantezana1998/Journey" target="_blank">🧠 Full Stack Web Application – Passion Project: Journey (IN PROGRESS)</a></li>
-              <li><a href="https://costasford.github.io/" target="_blank">🌐 Portfolio Site – HTML, CSS, JS</a></li>
-              <li><a href="https://costasford.github.io/gpt-fusion/" target="_blank">🎮 Game Prototype – Unity & C#</a></li>
-              <li><a href="https://github.com/costasford/auth-ui-kit" target="_blank">🔒 Auth UI Kit – Tailwind & Firebase</a></li>
+              <li><a href="https://costasford.github.io/NorcalSlippiLeaderboard/#/" target="_blank" aria-label="Data Visualization Dashboard built with React and D3.js for Norcal Slippi Leaderboard">📊 Data Viz Dashboard – React & D3</a></li>
+              <li><a href="https://github.com/mantezana1998/Journey" target="_blank" aria-label="Journey: A full stack web application focusing on mental health tracking and improvement">🧠 Full Stack Web Application – Passion Project: Journey (IN PROGRESS)</a></li>
+              <li><a href="https://costasford.github.io/" target="_blank" aria-label="Personal portfolio website showcasing projects and skills">🌐 Portfolio Site – HTML, CSS, JS</a></li>
+              <li><a href="https://costasford.github.io/gpt-fusion/" target="_blank" aria-label="Interactive game prototype developed with Unity and C Sharp">🎮 Game Prototype – Unity & C#</a></li>
+              <li><a href="https://github.com/costasford/auth-ui-kit" target="_blank" aria-label="Authentication UI Kit built with Tailwind CSS and Firebase">🔒 Auth UI Kit – Tailwind & Firebase</a></li>
             </ul>
           </div>
         </div>
