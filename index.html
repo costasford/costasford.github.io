@@ -582,6 +582,12 @@
       color: white;
       border-color: #475569;
     }
+
+    .status-offline {
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+      color: white;
+      border-color: #b91c1c;
+    }
     
     /* Technology Filter */
     .tech-filter {
@@ -834,18 +840,18 @@
                 </div>
               </li>
               
-              <li class="project-item" data-tech="React,Node.js,PostgreSQL" data-status="Live">
+              <li class="project-item" data-tech="React,Node.js,PostgreSQL" data-status="Offline">
                 <div class="project-main">
-                  <a href="https://costasford.github.io/FlowCRM" target="_blank" aria-label="FlowCRM: Production-ready property management CRM with enterprise architecture">💼 FlowCRM – Property Management</a>
+                  <a href="https://github.com/costasford/FlowCRM" target="_blank" aria-label="FlowCRM source code: property management CRM, backend temporarily offline">💼 FlowCRM – Property Management</a>
                   <button class="project-toggle" aria-label="Show project details">+</button>
                 </div>
                 <div class="project-details">
-                  <p>Full-stack CRM with contact management, kanban deal pipeline, JWT auth, React.memo performance optimization, and 66+ unit tests.</p>
+                  <p>Full-stack CRM with contact management, kanban deal pipeline, JWT auth, React.memo performance optimization, and 66+ unit tests. Backend is temporarily offline for redeployment — browse the source on GitHub in the meantime.</p>
                   <div class="project-tags">
                     <span class="tag">React</span>
                     <span class="tag">Node.js</span>
                     <span class="tag">PostgreSQL</span>
-                    <span class="tag status-live">Live</span>
+                    <span class="tag status-offline">Offline</span>
                   </div>
                 </div>
               </li>
@@ -1033,7 +1039,7 @@
       // Technology Filter System
       const filterButtons = document.querySelectorAll('.filter-btn');
       const projectItems = document.querySelectorAll('.project-item');
-      const projectTags = document.querySelectorAll('.tag:not(.status-live):not(.status-progress):not(.status-source)');
+      const projectTags = document.querySelectorAll('.tag:not(.status-live):not(.status-progress):not(.status-source):not(.status-offline)');
       
       function filterProjects(filterValue) {
         projectItems.forEach(item => {
