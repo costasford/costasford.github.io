@@ -576,6 +576,12 @@
       color: white;
       border-color: #d97706;
     }
+
+    .status-source {
+      background: linear-gradient(135deg, #64748b, #475569);
+      color: white;
+      border-color: #475569;
+    }
     
     /* Technology Filter */
     .tech-filter {
@@ -776,7 +782,7 @@
       <div class="card-inner">
         <div class="card-front">
           <div class="top-row">
-            <div><a href="mailto:costasford@proton.me">COSTASFORD@PROTON.ME</a></div>
+            <div><a id="contact-email" href="#" rel="nofollow">Loading…</a></div>
             <div>
               BUSINESS &amp; DEVELOPMENT<br>
               <a href="https://www.linkedin.com/in/costasford" target="_blank">LinkedIn</a>
@@ -794,7 +800,7 @@
           </div>
           <div class="bottom-row">
             BASE: SAN FRANCISCO CA <br>
-            PHONE: 650.254.6139 &nbsp;&nbsp; Text Only
+            PHONE: <span id="contact-phone">Loading…</span> &nbsp;&nbsp; Text Only
           </div>
         </div>
         <div class="card-back">
@@ -815,11 +821,11 @@
             <ul>
               <li class="project-item" data-tech="React,D3.js,JavaScript" data-status="Live">
                 <div class="project-main">
-                  <a href="https://costasford.github.io/NorcalSlippiLeaderboard/#/" target="_blank" aria-label="Data Visualization Dashboard built with React and D3.js for Norcal Slippi Leaderboard">📊 Data Viz Dashboard – React & D3</a>
+                  <a href="https://costasford.github.io/NorcalSlippiLeaderboard/#/" target="_blank" aria-label="Data Visualization Dashboard, forked and extended from an open-source Slippi leaderboard project">📊 Data Viz Dashboard – React & D3</a>
                   <button class="project-toggle" aria-label="Show project details">+</button>
                 </div>
                 <div class="project-details">
-                  <p>Interactive dashboard visualizing competitive gaming data with real-time updates and advanced filtering.</p>
+                  <p>Interactive dashboard visualizing competitive gaming data with advanced filtering. Forked from an open-source leaderboard project and extended with a custom stats pipeline and UI changes.</p>
                   <div class="project-tags">
                     <span class="tag">React</span>
                     <span class="tag">D3.js</span>
@@ -846,11 +852,11 @@
 
               <li class="project-item" data-tech="JavaScript,Node.js,MongoDB" data-status="In Progress">
                 <div class="project-main">
-                  <a href="https://costasford.github.io/Journey" target="_blank" aria-label="Journey: A full stack web application focusing on mental health tracking and improvement">🧠 Full Stack Web Application – Journey</a>
+                  <a href="https://costasford.github.io/Journey" target="_blank" aria-label="Journey: An ABA data collection and progress tracking platform for therapy professionals">🧠 Journey – ABA Data Tracking</a>
                   <button class="project-toggle" aria-label="Show project details">+</button>
                 </div>
                 <div class="project-details">
-                  <p>Comprehensive mental health tracking platform with personalized insights and community support features.</p>
+                  <p>Data collection and progress-tracking platform for Applied Behavior Analysis (ABA) professionals, with evidence-based measurement methods and automatic progress visualization.</p>
                   <div class="project-tags">
                     <span class="tag">JavaScript</span>
                     <span class="tag">Node.js</span>
@@ -877,7 +883,7 @@
               
               <li class="project-item" data-tech="Python,Unity,C#" data-status="Live">
                 <div class="project-main">
-                  <a href="https://costasford.github.io/gpt-fusion/" target="_blank" aria-label="GPT Fusion Python toolkit with interactive demos">🎮 GPT Fusion – Python Toolkit</a>
+                  <a href="https://costasford.github.io/gpt-fusion/demo.html" target="_blank" aria-label="GPT Fusion Python toolkit interactive live demo">🎮 GPT Fusion – Python Toolkit</a>
                   <button class="project-toggle" aria-label="Show project details">+</button>
                 </div>
                 <div class="project-details">
@@ -891,9 +897,9 @@
                 </div>
               </li>
               
-              <li class="project-item" data-tech="Tailwind,Firebase,JavaScript" data-status="Live">
+              <li class="project-item" data-tech="Tailwind,Firebase,JavaScript" data-status="Source">
                 <div class="project-main">
-                  <a href="https://github.com/costasford/gpt-fusion/tree/main/auth-ui-kit" target="_blank" aria-label="Authentication UI Kit built with Tailwind CSS and Firebase">🔒 Auth UI Kit – Tailwind</a>
+                  <a href="https://github.com/costasford/gpt-fusion/tree/main/auth-ui-kit" target="_blank" aria-label="Authentication UI Kit source code built with Tailwind CSS and Firebase">🔒 Auth UI Kit – Tailwind</a>
                   <button class="project-toggle" aria-label="Show project details">+</button>
                 </div>
                 <div class="project-details">
@@ -902,7 +908,7 @@
                     <span class="tag">Tailwind</span>
                     <span class="tag">Firebase</span>
                     <span class="tag">A11y</span>
-                    <span class="tag status-live">Live</span>
+                    <span class="tag status-source">Source</span>
                   </div>
                 </div>
               </li>
@@ -927,6 +933,26 @@
       return passive;
     })();
     
+    // Render contact info at runtime (kept out of static HTML to deter scraper harvesting)
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailUser = 'costasford';
+      const emailHost = ['proton', 'me'].join('.');
+      const email = emailUser + '@' + emailHost;
+      const emailLink = document.getElementById('contact-email');
+      if (emailLink) {
+        emailLink.href = 'mailto:' + email;
+        emailLink.textContent = email.toUpperCase();
+        emailLink.removeAttribute('rel');
+      }
+
+      const phoneDigits = [6, 5, 0, 2, 5, 4, 6, 1, 3, 9].join('');
+      const phoneDisplay = phoneDigits.slice(0, 3) + '.' + phoneDigits.slice(3, 6) + '.' + phoneDigits.slice(6);
+      const phoneSpan = document.getElementById('contact-phone');
+      if (phoneSpan) {
+        phoneSpan.textContent = phoneDisplay;
+      }
+    });
+
     // Theme Toggle Functionality
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggle = document.getElementById('theme-toggle');
@@ -1007,7 +1033,7 @@
       // Technology Filter System
       const filterButtons = document.querySelectorAll('.filter-btn');
       const projectItems = document.querySelectorAll('.project-item');
-      const projectTags = document.querySelectorAll('.tag:not(.status-live):not(.status-progress)');
+      const projectTags = document.querySelectorAll('.tag:not(.status-live):not(.status-progress):not(.status-source)');
       
       function filterProjects(filterValue) {
         projectItems.forEach(item => {
