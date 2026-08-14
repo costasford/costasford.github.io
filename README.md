@@ -28,9 +28,9 @@ Visit **[costasford.github.io](https://costasford.github.io)** to experience an 
 This portfolio demonstrates advanced frontend techniques in a clean, maintainable single-file architecture:
 
 ```
-index.html (1,038 lines)
+index.html (~1,100 lines)
 ├── 📱 Responsive HTML5 structure
-├── 🎨 Advanced CSS with 56 custom properties
+├── 🎨 CSS custom properties for theming
 ├── ⚡ Vanilla JavaScript for interactions  
 └── 🔧 Performance optimizations
 ```
@@ -38,7 +38,7 @@ index.html (1,038 lines)
 ### **Technical Highlights**
 
 **🎨 CSS Excellence:**
-- **CSS Custom Properties System** - 56 variables for perfect theming
+- **CSS Custom Properties System** - a full token set for perfect theming
 - **Advanced Animations** - Hardware-accelerated 3D transforms
 - **Responsive Design** - Mobile-first with thoughtful breakpoints
 - **Dark/Light Themes** - Seamless theme switching with persistence
@@ -77,8 +77,8 @@ php -S localhost:8000             # PHP
 ### **Paul Allen Business Card Inspiration**
 This portfolio transforms the iconic sophisticated business card aesthetic into an interactive digital experience:
 
-- **Luxury Materials** → Subtle textures and gradients
-- **Premium Typography** → Lora serif + Roboto Mono pairing
+- **Luxury Materials** → Subtle textures, embossed borders, and gradients
+- **Premium Typography** → Fraunces serif + JetBrains Mono pairing
 - **Elegant Layouts** → Perfect spacing and visual hierarchy  
 - **Tactile Feel** → Interactive hover states and micro-animations
 
@@ -113,7 +113,7 @@ This portfolio transforms the iconic sophisticated business card aesthetic into 
 - **Largest Contentful Paint**: < 1.5s  
 - **Cumulative Layout Shift**: < 0.1
 - **First Input Delay**: < 100ms
-- **Bundle Size**: Single HTML file (~50KB)
+- **Bundle Size**: Single HTML file (~40KB)
 
 ---
 
@@ -124,18 +124,20 @@ The entire color scheme is controlled through CSS custom properties:
 
 ```css
 :root {
-  /* Light Theme */
-  --bg-primary: #f4f1ec;
-  --bg-secondary: #fdfcf9;
-  --text-primary: #1a1a1a;
-  /* ...56 total variables */
+  /* Light Theme - warm cardstock */
+  --bg-primary: #eee8db;
+  --bg-secondary: #fbf8f1;
+  --text-primary: #1c1917;
+  --accent: #8a6a2f;
+  /* ...plus shadows, borders, and transitions */
 }
 
 [data-theme="dark"] {
-  /* Dark Theme Overrides */
-  --bg-primary: #0f0f0f;
-  --bg-secondary: #1a1a1a;
-  --text-primary: #e5e5e5;
+  /* Dark Theme - ink on slate */
+  --bg-primary: #111110;
+  --bg-secondary: #1b1a17;
+  --text-primary: #ece7db;
+  --accent: #c9a24b;
   /* ...perfectly balanced dark variants */
 }
 ```
@@ -144,7 +146,7 @@ The entire color scheme is controlled through CSS custom properties:
 Projects are defined with structured data attributes:
 
 ```html
-<li class="project-item" data-tech="React,D3.js,JavaScript" data-status="Live">
+<li class="project-item" data-tech="React,TypeScript,Node.js" data-status="Live">
   <!-- Project content -->
 </li>
 ```
