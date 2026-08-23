@@ -30,7 +30,8 @@
 
   <!-- Additional Social -->
   <meta property="article:author" content="Costas Ford">
-  <meta name="theme-color" content="#111110">
+  <meta name="theme-color" content="#eee8db" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -50,7 +51,28 @@
   
   <!-- PWA Manifest (Future Enhancement) -->
   <!-- <link rel="manifest" href="/manifest.json"> -->
-  
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Costas Ford",
+    "url": "https://costasford.github.io/",
+    "jobTitle": "Problem Solver",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA"
+    },
+    "sameAs": [
+      "https://github.com/costasford",
+      "https://www.linkedin.com/in/costasford",
+      "https://twitter.com/costasford"
+    ]
+  }
+  </script>
+
   <!-- Theme Detection Script -->
   <script>
     // Detect system preference and saved theme
@@ -207,6 +229,7 @@
       font-family: 'Fraunces', serif;
     }
     .logo-name {
+      margin: 0;
       font-size: 1.5rem;
       font-weight: 600;
       letter-spacing: 0.01em;
@@ -819,7 +842,7 @@
               <div class="logo-symbol">CF</div>
               <div class="logo-line"></div>
               <div class="logo-text">
-                <div class="logo-name">Costas Ford</div>
+                <h1 class="logo-name">Costas Ford</h1>
                 <div class="logo-tag">Problem Solver</div>
               </div>
             </div>
